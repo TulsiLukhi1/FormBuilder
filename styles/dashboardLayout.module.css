@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: #f3f4f6;
+    max-height: 100vh;
+  }
+  
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e5e7eb;
+    height: 60px;
+    padding: 0 16px;
+  }
+  
+  .main {
+    flex: 1;
+    display: flex;
+  }
+  

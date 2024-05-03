@@ -1,0 +1,14 @@
+.link {
+    font-weight: bold;
+    font-size: 1.875rem; 
+    background-image: linear-gradient(to right, #6366f1, #2563eb); 
+    -webkit-background-clip: text;
+    background-clip: text; 
+    color: transparent;
+    cursor: pointer; 
+  }
+  
+  .link:hover {
+    color: #6366f1; 
+  }
+  

@@ -1,0 +1,75 @@
+.btnContainer {
+    display: inline-block;
+  }
+  
+  .btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed rgba(61, 173, 243, 0.2);
+    height: 14rem;
+    padding: 1rem;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    border-color: #3dadf3;
+  }
+  
+  .icon {
+    height: 2rem;
+    width: 2rem;
+    color: #6b7280;
+  }
+  
+  .icon:hover {
+    color: #3dadf3;
+  }
+  
+  .title {
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: #6b7280;
+  }
+  
+  .title:hover {
+    color: #3dadf3;
+  }
+  
+  .dialogContent {
+    padding: 1rem;
+  }
+  
+  .dialogHeader {
+    margin-bottom: 0.1rem;
+  }
+  
+  .dialogTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1f2937;
+  }
+  
+  .dialogDescription {
+    font-size: 1rem;
+    color: #6b7280;
+    margin-top: 0.5rem;
+  }
+  
+  .form {
+    margin-top: 0.5rem;
+  }
+  
+  .formControl {
+    margin-bottom: 0.5rem;
+  }
+  
+  .saveBtn {
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding:0.5rem;
+    border-radius : 0.5rem  
+  }
+  

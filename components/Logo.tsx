@@ -1,12 +1,10 @@
 import Link from "next/link";
 import React from "react";
-
+import styles from './../styles/logo.module.css';
 function Logo() {
   return (
-    <Link
-      href={"/"}
-      className="font-bold text-3xl bg-gradient-to-r from-indigo-400 to-cyan-400 text-transparent bg-clip-text hover:cursor-pointer"
-    >DhiWise Form Builder
+    <Link href={"/"} className={styles.link} passHref>
+      DhiWise Form Builer
     </Link>
   );
 }
