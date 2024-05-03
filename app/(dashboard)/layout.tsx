@@ -1,7 +1,7 @@
 import Logo from "@/components/Logo";
 import { UserButton } from "@clerk/nextjs";
 import React, { ReactNode } from "react";
-import styles from "../../styles/dashboardLayout.module.css";
+import styles from "./../../styles/dashboardLayout.module.css"
 
 function Layout({ children }: { children: ReactNode }) {
   return (

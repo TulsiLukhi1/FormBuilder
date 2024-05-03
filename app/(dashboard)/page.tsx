@@ -64,7 +64,7 @@ function FormCard({ form }: { form: Form }) {
       </CardContent>
       <CardFooter className={styles.cardFooter}>
         <Button asChild variant={"secondary"} className="w-full mt-2 text-md gap-4">
-          <Link href="#">
+          <Link href={`/builder/${form.id}`}>
             Edit form <FaEdit />
           </Link>
         </Button>

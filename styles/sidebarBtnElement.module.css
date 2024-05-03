@@ -1,0 +1,32 @@
+.sideBarBtn {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    height: 120px;
+    width: 120px;
+    cursor: grab;
+}
+
+.sideBarDragging {
+    --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+    --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+    --tw-ring-color: hsl(var(--primary));
+}
+
+.icon {
+    height: 2rem;
+    width: 2rem;
+    font-size: 1rem;
+    color: #3182ce;
+    cursor: grab;
+}
+
+.dragOverlayBtn {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    height: 120px;
+    width: 120px;
+    cursor: grab;
+}
