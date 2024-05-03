@@ -1,0 +1,23 @@
+
+.propertySidebar {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+  
+  .propertySidebarHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem; 
+  }
+  
+  .propertySidebarHeaderText {
+    font-size: 0.875rem;
+    color: rgba(0, 0, 0, 0.7); 
+  }
+  
+  .propertySidebarContent {
+    margin-bottom: 1rem; 
+  }
+  
