@@ -1,7 +1,28 @@
+import { CheckboxFieldFormElement } from "./fields/CheckboxField";
+import { DateFieldFormElement } from "./fields/DateField";
+import { NumberFieldFormElement } from "./fields/NumberField";
+import { ParagprahFieldFormElement } from "./fields/ParagraphField";
+import { SelectFieldFormElement } from "./fields/SelectField";
+import { SeparatorFieldFormElement } from "./fields/SeparatorField";
+import { SpacerFieldFormElement } from "./fields/SpacerField";
+import { SubTitleFieldFormElement } from "./fields/SubTitleField";
+import { TextAreaFormElement } from "./fields/TextAreaField";
 import { TextFieldFormElement } from "./fields/TextField";
-
-export type ElementsType = "TextField"
- 
+import { TitleFieldFormElement } from "./fields/TitleField";
+import {SubmitBtnElement} from "./fields/SubmitBtn"
+export type ElementsType =
+  | "TextField"
+  | "TitleField"
+  | "SubTitleField"
+  | "ParagraphField"
+  | "SeparatorField"
+  | "SpacerField"
+  | "NumberField"
+  | "TextAreaField"
+  | "DateField"
+  | "SelectField"
+  | "CheckboxField"
+  | "SubmitBtn";
 
 export type SubmitFunction = (key: string, value: string) => void;
 
@@ -18,7 +39,6 @@ export type FormElement = {
   designerComponent: React.FC<{
     elementInstance: FormElementInstance;
   }>;
-
   formComponent: React.FC<{
     elementInstance: FormElementInstance;
     submitValue?: SubmitFunction;
@@ -41,7 +61,17 @@ export type FormElementInstance = {
 type FormElementsType = {
   [key in ElementsType]: FormElement;
 };
-
 export const FormElements: FormElementsType = {
-  TextField: TextFieldFormElement
+  TextField: TextFieldFormElement,
+  TitleField: TitleFieldFormElement,
+  SubTitleField: SubTitleFieldFormElement,
+  ParagraphField: ParagprahFieldFormElement,
+  SeparatorField: SeparatorFieldFormElement,
+  SpacerField: SpacerFieldFormElement,
+  NumberField: NumberFieldFormElement,
+  TextAreaField: TextAreaFormElement,
+  DateField: DateFieldFormElement,
+  SelectField: SelectFieldFormElement,
+  CheckboxField: CheckboxFieldFormElement,
+  SubmitBtn : SubmitBtnElement
 };

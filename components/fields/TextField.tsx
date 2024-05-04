@@ -11,7 +11,7 @@ import { useEffect, useState } from "react";
 import useDesigner from "../hooks/useDesigner";
 import { Form,FormDescription, FormField, FormItem, FormLabel, FormMessage } from "../ui/form";
 import { Switch } from "../ui/switch";
-import styles from "./../../styles/textField.module.css"
+import styles from "./../../styles/fields.module.css"
 
 const type: ElementsType = "TextField";
 
@@ -62,8 +62,8 @@ function DesignerComponent({ elementInstance }: { elementInstance: FormElementIn
   const element = elementInstance as CustomInstance;
   const { label, required, placeHolder, helperText } = element.extraAttributes;
   return (
-    <div className={styles.textFieldFormElement}>
-      <Label className={styles.labelContainer}>
+    <div className={styles.formElement}>
+      <Label>
         {label}
         {required && <span className={styles.errorText}>*</span>}
       </Label>
@@ -95,8 +95,8 @@ function FormComponent({
 
   const { label, required, placeHolder, helperText } = element.extraAttributes;
   return (
-    <div className={styles.textFieldFormElement}>
-    <Label className={`${styles.labelContainer} ${error && styles.errorText}`}>
+    <div className={styles.formElement}>
+    <Label className={`${error && styles.errorText}`}>
       {label}
       {required && <span className={styles.errorText}>*</span>}
     </Label>
@@ -157,7 +157,7 @@ function PropertiesComponent({ elementInstance }: { elementInstance: FormElement
       onSubmit={(e) => {
         e.preventDefault();
       }}
-      className={styles.textFieldFormElement}
+      className={styles.fieldFormElement}
     >
       <FormField
         control={form.control}
@@ -222,7 +222,7 @@ function PropertiesComponent({ elementInstance }: { elementInstance: FormElement
         control={form.control}
         name="required"
         render={({ field }) => (
-          <FormItem className={styles.textFieldFormElement}>
+          <FormItem className={styles.fieldFormElement}>
             <div className={styles.labelContainer}>
               <FormLabel>Required</FormLabel>
               <FormDescription>

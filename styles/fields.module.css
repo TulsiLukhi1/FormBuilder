@@ -1,0 +1,116 @@
+.formElement {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.errorText {
+  color: red;
+}
+
+.helperText {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 0.875rem;
+}
+
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #343434
+}
+
+.subtitle {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #343434
+}
+
+
+.inputField {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  outline: none;
+}
+
+.flexContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.5rem;
+  border: 1px solid #e2e8f0;
+  padding: 0.75rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.spaceY {
+  margin-bottom: 0.5rem;
+}
+
+
+.spacerFieldFormComponent {
+  height: 100%;
+  width: 100%;
+}
+
+/* for option field */
+.optionsSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.optionsSectionButton {
+  gap: 0.5rem;
+}
+
+.optionsSectionOption {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.optionsSectionInput {
+  width: calc(100% - 40px);
+}
+
+/* for date fiels */
+.generatedClass {
+  width: auto;
+}
+
+.generatedPopoverContent {
+  padding: 0;
+}
+
+.dateButton {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  text-align: left;
+  font-weight: normal;
+}
+
+.dateIcon {
+  margin-right: 0.5rem;
+  height: 1rem;
+  width: 1rem;
+}
+
+.generatedText {
+  display: block;
+}
+
+.generatedCalendarIcon {
+  margin-right: 0.5rem;
+}
+
+
+/* checkbox field */
+.checkBoxFlex {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}

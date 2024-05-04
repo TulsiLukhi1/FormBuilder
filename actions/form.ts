@@ -35,6 +35,43 @@ export async function CreateForm(data: formSchemaType) {
 }
 
 
+export async function DeleteForm(id:number) {
+  const user = await currentUser();
+
+  if (!user) {
+    throw new UserNotFoundErr();
+  }
+
+  const form = await prisma.form.findUnique({
+    where: {
+      userId: user.id,
+      id,
+    },
+  });
+
+  if (!form) {
+    throw new Error("Form not found");
+  }
+
+  if (!user || user.id !== form.userId) {
+    throw new Error("User not authorized to delete this form");
+  }
+
+  const deletedForm = await prisma.form.delete({
+    where: {
+      id: id,
+    },
+  });
+
+  if (!deletedForm) {
+    throw new Error("Failed to delete form");
+  }
+
+  return "Form deleted successfully";
+}
+
+
+
 export async function GetForms() {
   const user = await currentUser();
   if (!user) {
