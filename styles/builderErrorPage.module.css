@@ -1,0 +1,28 @@
+.container{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.errorText {
+  color: #FF4C4C;
+  font-size: 2rem;
+}
+
+.button{
+  padding: 0.5rem 1rem;
+  color: #FFF;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+
+.spinner{
+  animation: spin 2s linear infinite;
+  height: 3rem;
+  width: 3rem;
+}

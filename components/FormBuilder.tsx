@@ -9,6 +9,8 @@ import DragOverlayWrapper from "./DragOverlayWrapper";
 import useDesigner from "./hooks/useDesigner";
 import { ImSpinner2 } from "react-icons/im";
 import PreviewDialogBtn from "./PreviewDialogBtn";
+import ViewCodeBtn from "./ViewCodeBtn";
+import styles from "./../styles/formbuilder.module.css"
 
 function FormBuilder({ form }: { form: Form }) {
   const { setElements, setSelectedElement } = useDesigner();
@@ -40,28 +42,27 @@ function FormBuilder({ form }: { form: Form }) {
 
   if (!isReady) {
     return (
-      <div className="flex flex-col items-center justify-center w-full h-full">
-        <ImSpinner2 className="animate-spin h-12 w-12" />
+      <div className={styles.spinnerContainer}>
+        <ImSpinner2 className={styles.spinner} />
       </div>
     );
   }
 
   return (
     <DndContext sensors={sensors}>
-      <main className="flex flex-col w-full">
-        <nav className="flex justify-between border-b-2 p-4 gap-3 items-center">
-          <h2 className="truncate font-medium">
-            <span className="text-muted-foreground mr-2">Form:</span>
+      <main className={styles.main}>
+      <nav className={styles.nav}>
+          <h2 className={styles.formTitle}>
+            <span className={styles.formTitleText}>Form:</span>
             {form.name}
           </h2>
-          <div className="flex items-center gap-2">
+          <div className={styles.navButtons}>
             <PreviewDialogBtn />
-              <>
-                <SaveFormBtn id={form.id} />
-              </>
+            <ViewCodeBtn />
+            <SaveFormBtn id={form.id} />
           </div>
         </nav>
-        <div className="flex w-full flex-grow items-center justify-center relative overflow-y-auto h-[200px] bg-accent bg-[url(/paper.svg)] dark:bg-[url(/paper-dark.svg)]">
+        <div className={styles.designer}>
           <Designer />
         </div>
       </main>

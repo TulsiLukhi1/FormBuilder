@@ -1,32 +1,18 @@
-.para-text {
+.sidebarTitle{
     font-size: 0.875rem;
-    line-height: 1.25rem;
-    color: hsl(var(--foreground) / 0.7);
-}
-
-.form-element-sidebar-container {
-    display: grid;
-    gap: 1rem;
-}
-
-.form-elements-para {
-    font-size: 0.875rem;
-    color: #808080;
-    grid-column: span 1;
+    color: #6b7280;
     margin-top: 0.5rem;
-    align-self: start;
+    margin-bottom: 0.5rem;
+    place-self: start;          
 }
 
-@media (min-width: 768px) {
-    .form-element-sidebar-container {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
+.elementContainer{
+    display : grid;
+    grid-template-columns: auto auto;
+    gap:1rem;
+}
 
-    .layout-elements-para {
-        grid-column: span 2;
-    }
-
-    .form-elements-para {
-        grid-column: span 2;
-    }
+.mainTitle{
+  font-size: 0.875rem; /* text-sm */
+  color: rgba(0, 0, 0, 0.7); /* text-foreground/70 */
 }

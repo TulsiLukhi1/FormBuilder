@@ -83,7 +83,7 @@ function CreateFormBtn() {
           </form>
         </Form>
         <DialogFooter>
-          <button type="submit" onClick={form.handleSubmit(onSubmit)} disabled={form.formState.isSubmitting} className={styles.saveBtn}>
+          <button type="submit" disabled={form.formState.isSubmitting} className={styles.saveBtn}>
             {!form.formState.isSubmitting && <span>Save</span>}
             {form.formState.isSubmitting && <ImSpinner2 className="animate-spin" />}
           </button>

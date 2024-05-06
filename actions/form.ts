@@ -109,7 +109,6 @@ export async function UpdateFormContent(id: number, jsonContent: string) {
     throw new UserNotFoundErr();
   }
 
-  console.log(jsonContent)
   return await prisma.form.update({
     where: {
       userId: user.id,
@@ -120,3 +119,4 @@ export async function UpdateFormContent(id: number, jsonContent: string) {
     },
   });
 }
+

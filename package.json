@@ -54,13 +54,13 @@
     "next": "13.5.1",
     "nextjs-toploader": "^1.4.2",
     "postcss": "8.4.29",
-    "prettier": "^3.0.3",
     "react": "18.2.0",
     "react-confetti": "^6.1.0",
     "react-day-picker": "^8.8.2",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.46.1",
     "react-icons": "^4.11.0",
+    "react-syntax-highlighter": "^15.5.0",
     "tailwind-merge": "^1.14.0",
     "tailwindcss": "3.3.3",
     "tailwindcss-animate": "^1.0.7",
@@ -68,6 +68,7 @@
     "zod": "^3.22.2"
   },
   "devDependencies": {
+    "@types/react-syntax-highlighter": "^15.5.13",
     "eslint-plugin-unused-imports": "^3.0.0",
     "prisma": "^5.3.1"
   }
