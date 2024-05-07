@@ -13,19 +13,19 @@ function ViewCodeBtn() {
   const { elements } = useDesigner();
   const [code, setCode] = useState("");
 
-  const getCode = () => {
-    return elements.map((element) => {
-      const FormComponent = FormElements[element.type].formComponent;
-      const com = <FormComponent elementInstance={element} />;
-      return renderToStaticMarkup(com);
-    }).join('\n');
-  };
-
   useEffect(() => {
-    const codeT = getCode();
-    setCode(codeT);
+    const getCode = () => {
+      return elements.map((element) => {
+        const FormComponent = FormElements[element.type].formComponent;
+        const component = <FormComponent elementInstance={element} />;
+        return renderToStaticMarkup(component);
+      }).join('\n');
+    };
+  
+    const formCode = getCode();
+    setCode(formCode);
   }, [elements]);
-
+  
   return (
     <Dialog>
       <DialogTrigger asChild>

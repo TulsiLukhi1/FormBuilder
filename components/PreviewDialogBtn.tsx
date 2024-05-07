@@ -20,7 +20,7 @@ function PreviewDialogBtn() {
       <DialogContent className={styles.previewDialogBtnContent}>
         <div className={styles.previewDialogHeader}>
           <p className={styles.previewDialogTitle}>Form preview</p>
-          <p className={styles.previewDialogSubtitle}>Here's how your form will look...</p>
+          <p className={styles.previewDialogSubtitle}>Here&apos;s how your form will look...</p>
         </div>
         <div className={`${styles.previewDialogContent} ${styles.previewDialogPaperBackground} dark:${styles.previewDialogDarkPaperBackground}`}>
           <div className={styles.previewDialogInnerContent}>

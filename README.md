@@ -16,13 +16,17 @@ npm install
 ## Setup Authentication for Clerk
 
 1. **Environment Variables**: 
+
+   - SignUp/LogIn to [Clerk](https://dashboard.clerk.com/sign-up)
+   - Navigate to the dashboard and select "Create Application". 
+   - In the popup window, designate the application name. For this project, you can name it "FormBuilder". 
+   - Proceed by clicking on "Create Application"
    
    In the `.env` file, provide credentials for the following environment variables:
    
    - `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY`
    - `CLERK_SECRET_KEY`
 
-   For your Clerk app, refer to the [documentation](https://clerk.com/docs/quickstarts/nextjs) for details.
 
 2. **Update `.env` file**:
 
@@ -40,6 +44,7 @@ npm install
 1. **Create Database on Vercel**:
 
    - Login or signup to [Vercel](https://vercel.com/dashboard/stores).
+   - Go to Storage section
    - Create a database.
    - Choose PostgreSQL and continue.
    - Provide a database name, select region, and click create.
