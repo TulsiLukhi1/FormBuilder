@@ -13,6 +13,8 @@ import { toast } from "./ui/use-toast";
 import { CreateForm } from "@/actions/form";
 import styles from "../styles/createFormBtn.module.css";
 import { useRouter } from "next/navigation";
+import { Button } from "./ui/button";
+
 
 function CreateFormBtn() {
   const router = useRouter()
@@ -40,12 +42,9 @@ function CreateFormBtn() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <div className={styles.btnContainer}>
-          <div className={styles.btn}>
-            <BsFileEarmarkPlus className={styles.icon} />
-            <p className={styles.title}>Create new form</p>
-          </div>
-        </div>
+        <Button >
+            Create new form
+        </Button>
       </DialogTrigger>
       <DialogContent className={styles.dialogContent}>
         <DialogHeader className={styles.dialogHeader}>

@@ -15,12 +15,14 @@ import styles from "../../styles/dashboardPage.module.css";
 export default function Home() {
   return (
     <div className={styles.container}>
-      <h2 className={`${styles.heading} col-span-2`}>Your forms</h2>
+      <div style={{display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+        <h2 className={`${styles.heading}`}>Your forms</h2>
+        <CreateFormBtn />
+      </div>
       <Separator className={styles.separator} />
       <div className={`${styles.grid} ${styles.gridCols}`}>
-        <CreateFormBtn />
         <Suspense
-          fallback={[1, 2, 3, 4].map((el) => (
+          fallback={[1, 2, 3, 4,5,6].map((el) => (
             <FormCardSkeleton key={el} />
           ))}
         >
@@ -45,6 +47,7 @@ async function FormCards() {
     </>
   );
 }
+
 
 function FormCard({ form }: { form: Form }) {
   return (

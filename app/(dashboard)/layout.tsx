@@ -11,7 +11,7 @@ function Layout({ children }: { children: ReactNode }) {
   const router = useRouter()
   return (
     <div className={styles.container}>
-      <nav className={`${styles.nav} border-b border-border`}>
+      <nav className={styles.nav}>
         <Logo />
         <div className="flex gap-4 items-center">
           <Button 

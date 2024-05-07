@@ -8,10 +8,12 @@ import styles from "./../styles/previewDialogueBtn.module.css";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { renderToStaticMarkup } from 'react-dom/server';
+import { toast } from "./ui/use-toast";
 
 function ViewCodeBtn() {
   const { elements } = useDesigner();
   const [code, setCode] = useState("");
+  const [isCopied, setIsCopied] = useState(false); // State to track whether code is copied or not
 
   useEffect(() => {
     const getCode = () => {
@@ -25,6 +27,23 @@ function ViewCodeBtn() {
     const formCode = getCode();
     setCode(formCode);
   }, [elements]);
+
+  const copyCodeToClipboard = () => {
+    navigator.clipboard.writeText(code)
+      .then(() => {
+        setIsCopied(true); 
+        setTimeout(() => {
+          setIsCopied(false);
+        }, 3000);
+      })
+      .catch((error) => {
+        toast({
+          title: "Error",
+          description: "Unable to copy code to clipboard:",
+          variant: "destructive",
+        });
+      });
+  };
   
   return (
     <Dialog>
@@ -42,7 +61,10 @@ function ViewCodeBtn() {
           <p className="font-bold">Form Code:</p>
           <SyntaxHighlighter language="jsx" style={tomorrow}>
             {code}
-          </SyntaxHighlighter>  
+          </SyntaxHighlighter>
+          <Button onClick={copyCodeToClipboard} className="mt-4">
+            {isCopied ? "Code Copied !" : "Copy Code"} 
+          </Button>
         </div>
       </DialogContent>
     </Dialog>
