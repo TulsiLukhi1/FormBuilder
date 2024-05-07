@@ -15,7 +15,7 @@ function Layout({ children }: { children: ReactNode }) {
         <Logo />
         <div className="flex gap-4 items-center">
           <Button 
-            onClick={() => router.push('/')}
+            onClick={() => window.location.href = '/'}
           >Dashboard</Button>
           <UserButton afterSignOutUrl="/sign-in" />
         </div>

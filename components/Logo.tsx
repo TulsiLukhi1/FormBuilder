@@ -3,9 +3,9 @@ import React from "react";
 import styles from "../styles/logo.module.css";
 function Logo() {
   return (
-    <Link href={"/"} className={styles.link} passHref>
+    <div className={styles.link}>
       DhiWise Form Builder
-    </Link>
+    </div>
   );
 }
 
