@@ -4,7 +4,7 @@ import styles from "../styles/logo.module.css";
 function Logo() {
   return (
     <Link href={"/"} className={styles.link} passHref>
-      DhiWise Form Builer
+      DhiWise Form Builder
     </Link>
   );
 }
