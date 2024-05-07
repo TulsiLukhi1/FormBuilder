@@ -66,7 +66,6 @@ export const SelectFieldFormElement: FormElement = {
 type CustomInstance = FormElementInstance & {
   extraAttributes: typeof extraAttributes;
 };
-
 function DesignerComponent({ elementInstance }: { elementInstance: FormElementInstance }) {
   const element = elementInstance as CustomInstance;
   const { label, required, placeHolder, helperText } = element.extraAttributes;
@@ -101,6 +100,11 @@ function FormComponent({
 
   const [value, setValue] = useState(defaultValue || "");
   const [error, setError] = useState(false);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   useEffect(() => {
     setError(isInvalid === true);
@@ -108,12 +112,12 @@ function FormComponent({
 
   const { label, required, placeHolder, helperText, options } = element.extraAttributes;
   return (
-    <div className={styles.formElement}>
-      <Label className={cn(error && styles.errorText)}>
+    <div className="flex flex-col gap-2 w-full">
+      <Label className={cn(error && "text-red-500")}>
         {label}
         {required && "*"}
       </Label>
-      <Select
+      {isClient && <Select
         defaultValue={value}
         onValueChange={(value) => {
           setValue(value);
@@ -123,18 +127,18 @@ function FormComponent({
           submitValue(element.id, value);
         }}
       >
-        <SelectTrigger className={cn("w-full", error && styles.errorText)}>
+        <SelectTrigger className={cn("w-full", error && "border-red-500")}>
           <SelectValue placeholder={placeHolder} />
         </SelectTrigger>
         <SelectContent>
-          {options.map((option) => (
-            <SelectItem key={option} value={option}>
+          {options.map((option) => {
+            return <SelectItem key={option} value={option}>
               {option}
             </SelectItem>
-          ))}
+          })}
         </SelectContent>
-      </Select>
-      {helperText && <p className={cn(styles.helperText, error && styles.errorText)}>{helperText}</p>}
+      </Select>}
+      {helperText && <p className={cn("text-muted-foreground text-[0.8rem]", error && "text-red-500")}>{helperText}</p>}
     </div>
   );
 }
