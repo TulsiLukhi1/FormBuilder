@@ -12,6 +12,7 @@
     max-width: 100%;
     max-height: 100%;
     display: flex;
+    overflow-y: auto;
     flex-direction: column;
     flex-grow: 1;
     padding: 0;
@@ -20,7 +21,10 @@
   .previewDialogHeader {
     padding: 0.5rem 1rem;
     border-bottom: 1px solid #ccc;
-    
+    position: sticky;
+    top: 0;
+    z-index: 1; 
+    background-color:white;
   }
   
   .previewDialogTitle {
